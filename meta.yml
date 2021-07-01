@@ -53,11 +53,19 @@ supported_ocaml_versions:
     text: 4.05.0 or later
     opam: '{>= "4.05.0"}'
 
-tested_coq_nix_versions:
-- version_or_url: https://github.com/coq/coq-on-cachix/tarball/master
-
 tested_coq_opam_versions:
 - version: dev
+
+cachix:
+- name: coq
+- name: coq-community
+  token: CACHIX_AUTH_TOKEN
+
+nix-bundles:
+- bundle: default
+  packages:
+  - name: coq
+    version: master
 
 namespace: AAC_tactics
 
